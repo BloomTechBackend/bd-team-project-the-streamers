@@ -29,25 +29,36 @@ preferences. Their playlist will be updated by their personal preferences based
 off the song library that we have curated. The user will also have access to additional songs that are
 similar to their preferences.
 
-User looks at our library (spotify)
-user has to decide a genre to start with
-user will like or dislike the songs in the GENRE, liked songs will be added to the users playlist and dislike will not be added,
+How to define lesser known artists
+Less than 1 million monthly listeners
+
+User looks at 24 mainstream songs
+user can choose up to top 10 songs from the mainstream list
+user will get a one song suggestion based off their preference
+user will like or dislike the song in the suggestions based off GENRE, liked songs will be added to the USERS playlist and dislike will not be added,
 backend will return a playlist just for the user based on liked songs
 user will have access to other songs based on the GENRE (colors) keep a tally of these to provide the rest of the songs
 
 
-Genres (each category gets 10 songs)
-Alternative --
-Hip/Hop & RNB
-Country
-Oldies
-Electronic
-Soundtracks
-Reggae
-Indie
-Instrumental
-Pop
-Jazz
+*****Genres (each category gets 10 songs)
+one man one woman
+
+
+1. Alt Rock - Deepali --- Black
+2. Hip/Hop & RNB - Sarah --- Navy Blue -- Drake/Nicki Minaj or Lauryn Hill?
+3. Country - Deepali -- Leather Brown
+4. Oldies - Deepali -- Orange
+5. Electronic - Sarah -- Lime Green -- Daft Punk/ Grimes or Lady Gaga (lady gaga is considered dance electronic) Frou Frou is underground
+6. Soundtracks - Sarah -- Pink -- Harder to figure out, the composers or the singers?
+7. Reggae - Sarah -- Red -- Bob Marley/Marcia Griffiths
+8. Indie - Deepali -- Lilac
+9. Instrumental - Deepali -- Yellow
+10. Pop - Sarah -- Hot pink -- Michael Jackson or Ed Sheeran/Taylor Swift
+11. Jazz - Deepali -- Indigo
+12. Latin - Sarah -- Hot Tamale red (flames) -- Wisin/Karol G
+
+Classes *****
+Playlist
 
 
 One table for all the songs.

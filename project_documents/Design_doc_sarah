@@ -1,0 +1,253 @@
+#  The Streamers Design Document
+
+## *Underground* Design
+
+## 1. Problem Statement
+
+*Streamers is a streaming service that provides expertly curated content for listeners
+who want suggestions of underground artists that fit their specific tastes.
+
+This design document describes the Streamers service, a new service that will
+provide a custom playlist based on our customers' needs. Users will be equipped with the
+ability to listen to new, upcoming, underground artists based on their current interests and
+preferences. Their playlist will be updated by their personal preferences based
+off the song library that we have curated. The user will also have access to additional songs that are
+similar to their preferences.*
+
+
+## 2. Top Questions to Resolve in Review
+
+*List the most important questions you have about your design, or things that
+you are still debating internally that you might like help working through.*
+
+1. How will we organize all of the data? If the user dislikes a certain song, do they have to
+   continue through the whole playlist or
+2. How many songs based off the user survey will be provided? We can have one song provided, or a list of 10 songs?
+3. Are the upvotes going to be their playlist songs?
+4. What defines a lesser known artist?
+
+## 3. Use Cases
+
+*This is where we work backwards from the customer and define what our customers
+would like to do (and why). You may also include use cases for yourselves, or
+for the organization providing the product to customers.*
+
+U1. *As an [Underground] customer, I want to have the option to save my suggested songs*
+
+U2. *As an [Underground] customer, I want to skip over songs that I don't care for*
+
+U3. *As an [Underground] customer, I want to be able to browse the libraries according to genres*
+
+U4. *As an [Underground] customer, I want to listen new music that is curated to my taste*
+
+U5. *As an [Underground] customer, I want the option to listen to diverse new/ underground artists*
+
+## 4. Project Scope
+
+### 4.1. In Scope
+
+* Creating a playlist based on song recommendations from the user preferences
+* Saving songs from different genre playlists onto your own customized playlist
+* User can browse music library
+* Upvoting and downvoting song choice
+* User will have a customized playlist saved under their unique user ID
+* Front end app page will look like an underground subway(graffiti)
+* Front end app will be red brick with the U graffiti
+
+### 4.2. Out of Scope
+
+*Based on your problem description in Sections 1 and 2, are there any aspects
+you are not planning to solve? Do potential expansions or related problems occur
+to you that you want to explicitly say you are not worrying about now? Feel free
+to put anything here that you think your team can't accomplish in the unit, but
+would love to do with more time.*
+
+* Song capacity is limited to 100 to start
+* Genres are limited to 12 to start
+* Integration with Spotify
+* The ability to have more than one playlist
+* Songs can only have one tag instead of multiple
+* The ability to search for songs
+* Sharing playlist between users
+* The ability to search for songs, genres must be browsed to find songs
+* Front end app page will look like an underground subway(graffiti)
+* Front end app will be red brick with the U graffiti
+* JOptionPane button uses dialogue boxes 
+
+
+# 5. Proposed Architecture Overview
+
+*This basic iteration will provide the user with the ability to be exposed to new and upcoming artists. The user will have the ability to
+search through music organized by genre, add songs to a custom playlist and also will be provided a playlist based on their preferences
+which will be compiled by the initial mainstream music survey.*
+
+*We will store the songs available in separate tables using DynamoDB. Playlists and user lists will also be stored in DynamoDB.*
+
+*We will use API Gateway and Lambda to create endpoints that will handle the creation and retrieval of the 2 playlists per user.*
+
+*The user will go through a web interface to manage their playlists and to view the provided music library.*
+
+# 6. API
+
+## 6.1. Public Models
+
+```
+// PlaylistModel
+
+String id;
+String name;
+String customerId;
+Integer songCount;
+List<String> tags;
+```
+
+```
+// UserModel
+
+String id;
+String name;
+String customPlaylistId;
+String providedPlaylistId;
+```
+
+## 6.2. *Get Provided Playlist Endpoint*
+
+*Accepts GET requests*
+*Accepts data from initial survey to create a new playlist based on user preference. Playlist is assigned to specific 
+user ID.*
+*The user ID will have genre tags assigned based on initial preference.*
+
+## 6.3 *Create User Playlist Endpoint*
+
+*Accepts POST requests*
+*Accepts data to create a new playlist with provided user ID.*
+*UserID must be alphanumeric.
+   If the ID contains any invalid characters, and InvalidCharacterException will be thrown.*
+
+## 6.4 *Update User Playlist Endpoint*
+
+*Accepts PUT requests*
+*Accepts data provided by user to create a new custom playlist, including a new playlist ID. User can add or remove songs
+from playlist.*
+*User had the ability to change the order of the songs (Shuffle, Reverse or Default).*
+*If the user does not enter the correct User ID - an InvalidUserIdException will be thrown.*
+
+
+# 7. Tables
+
+### 7.1. `users`
+```
+id // partition key, string
+name // string
+customerId // string
+providedPlaylistId // string
+customPlaylistId // string
+```
+
+### 7.2. `provided_playlist`
+```
+customerId // partition key, string
+id // string
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.3. `custom_playlist`
+```
+customerId // partition key, string
+id // string
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.4. `alt_rock`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.5. `hiphop_rnb`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.6. `country`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.7. `oldies`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.8. `elelctronic`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.9. `soundtracks`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.10. `reggae`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.11. `indie`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.12. `instrumental`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.13. `pop`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.14. `jazz`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+### 7.15. `latin`
+```
+songId // string
+songCount // integer
+tags // stringSet
+```
+
+
+
+# 8. Pages
+
+*WORK IN PROGRESS*
