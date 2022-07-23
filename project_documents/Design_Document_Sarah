@@ -39,6 +39,12 @@ user will like or dislike the song in the suggestions based off GENRE, liked son
 backend will return a playlist just for the user based on liked songs
 user will have access to other songs based on the GENRE (colors) keep a tally of these to provide the rest of the songs
 
+How is the front end going to look?
+
+Graffitti Underground
+
+
+
 
 *****Genres (each category gets 10 songs)
 one man one woman
@@ -48,17 +54,87 @@ one man one woman
 2. Hip/Hop & RNB - Sarah --- Navy Blue -- Drake/Nicki Minaj or Lauryn Hill?
 3. Country - Deepali -- Leather Brown
 4. Oldies - Deepali -- Orange
-5. Electronic - Sarah -- Lime Green -- Daft Punk/ Grimes or Lady Gaga (lady gaga is considered dance electronic) Frou Frou is underground
-6. Soundtracks - Sarah -- Pink -- Harder to figure out, the composers or the singers?
+5. Electronic - Sarah -- Lime Green -- Daft Punk/ Grimes or Lady Gaga (lady gaga is considered dance electronic) Frou Frou - Let Go
+6. Soundtracks - Sarah -- Pink -- John Williams /
 7. Reggae - Sarah -- Red -- Bob Marley/Marcia Griffiths
 8. Indie - Deepali -- Lilac
 9. Instrumental - Deepali -- Yellow
-10. Pop - Sarah -- Hot pink -- Michael Jackson or Ed Sheeran/Taylor Swift
+10. Pop - Sarah -- Hot pink -- Ed Sheeran/Taylor Swift
 11. Jazz - Deepali -- Indigo
 12. Latin - Sarah -- Hot Tamale red (flames) -- Wisin/Karol G
 
-Classes *****
-Playlist
+Hip/Hop & RNB -- Drake / Lauryn Hill
+1.Arlissa - Hearts Ain't Gonna Lie
+2.Fatboi Sharif -- Fly Pelican
+3.Hook -- 4:47 AM
+4.Na-Kel Smith -- Wait on you
+5.D2x -- Day Job
+6.Rigz -- Heads On The Wall
+7.DonMonique -- Drown   ***
+8.Ivy Sole -- Dream Girl (lauryn hill song vibes)
+9.Che Noir -- Table for 3
+10.Lakeyah -- Mind Yo Business
+
+Electronic -- Daft Punk / Grimes
+1.Jlin -- Vladmir's Blues
+2.Anna Meredith -- Calion
+3.Gwenno -- Tir Ha mor
+4.Gazelle Twin -- Look What Your Love Has Done To Me
+5.The Field -- Everybody's Got To Learn Sometime
+6.Holly Herndon -- Frontier
+7.U.S Girls -- L-Over
+8.Leon Vynehall -- It's Just (House of Dupree)
+9.Kassem Mosse -- Flowers in May
+10.Hieroglyphic Being -- Ashrams
+
+Soundtracks -- John Williams / Walt Disney (these were all composed for movie soundtracks)
+1.Anne Dudley -- Main Titles
+2.Rachel Portman -- Laughter Montage
+3.Debbie Wiseman -- Wilde West
+4.Lesley Barber -- Manchester By The Sea Chorale
+5.Delia Derbyshire -- Quest
+6.Mica Levi -- Children
+7.Wendy Carlos -- Love Theme
+8.Angela Morley -- Watership Down: Keehaar's Theme
+9.Michael Andrews -- Mad World (known ish song, but one hit wonder, still has less than 1 mil followers)
+10.Patrick Doyle -- Harry in Winter
+11.Jon Brion -- Reconcile
+
+Reggae -- Bob Marley / Marcia Griffiths
+1.Burning Spear -- Marcus Garvey
+2.Sizzla -- Give Me A Try
+3.Jah Roots -- Crucial
+4.Serengeti -- Dennehy
+5.Jesse Cool -- Zion I
+6.Junior Tshaka -- La Jungle
+7.Dezarie -- Most High
+8.Alaine -- Deeper
+9.Lisa Hype -- How Yuh Do It Like Dat
+10.Tanya Stephens -- It's A Pity
+
+Pop -- Ed Sheeran / Taylor Swift , usually played on electronic instruments, that is popular with many people because it consists of short songs with a strong beat
+1.Eisenhower Field Day -- Five After
+2.Kalliope Jones -- Bubblegum <3
+3.Audrey Napoleon -- #Mysunrise
+4.TYSM -- Normal No More
+5.Animal Collective -- My Girls
+6.DIV/DED -- I JUST WANT YOU
+7.Marshall Crenshaw -- Someday, Someway
+8.Liz Phair -- Why Can't I?
+9.Tommy Richman -- BUNKER/PREROLL
+10.My Favorite Color -- Good Times
+
+Latin -- Wisin / Karol G
+1.Combo Chimbita -- Brillo Mas Que El Oro (La Bala Apuntandome)
+2.Reyna Tropical -- Como Fuego
+3.Inner Wave -- American Spirits
+4.Cimafunk -- Parar el Tiempo
+5.Nicola Cruz -- Cumbia del Olvido
+6.Manu Manzo --Te Queiro Ver
+7.Como Las Movies -- Cumbia De Los Monjes
+8.Gina Chavez -- La Que Manda
+9.Maria Isabel -- atrapada en el cielo
+10.The Citie -- Nena
 
 
 One table for all the songs.

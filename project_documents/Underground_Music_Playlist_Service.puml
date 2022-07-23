@@ -84,7 +84,7 @@ class InvalidUserIdException {
     -{static} long serialVersionUID
 }
 
-class InvalidCharacterException {
+class InvalidIdException {
     -{static} long serialVersionUID
 }
 
